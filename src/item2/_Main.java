@@ -23,6 +23,15 @@ public class _Main {
                 .email("choi94@naver.com")
                 .build();
 
+        /* 공변 반환 타입 */
+        Animal animal = new Animal();
+        Animal animalCopy = animal.copy();
+
+        Cat cat = new Cat();
+        Cat catCopy = cat.copy();
+
+        Dog dog = new Dog();
+        Dog dogCopy = (Dog) dog.copy(); //공변 반환 타입을 적용하지 않으면 메서드 호출하는 쪽에서 명시적 형변환이 필요함.
 
     }
 }
